@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/Website 3 column/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         @font-face {
+            font-family: 'CMEXKai';
+src: url('KAI-PC-2.ttf');
+  font-family: 'Pfeffer Mediæval ';
+  src: url('PfefferMediaeval.otf');
+  font-family:'FZXiaoZhuanTi-S13T' ;
+  src: url('方正小篆体.ttf');
+         }
+         ::-webkit-scrollbar {
+            display: none;
+        }
+        body{
+            margin:0px;
+            overflow: hidden;
+            scrollbar-width: none;  
+        }
+        .column-container{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            /* flex-direction:row;
+            flex-wrap:wrap; */
+            width:100%;
+            background-color: rgb(255, 249, 239);
+        }
+        .column-wrapper{
+            /* width:33%; */
+            height:100vh;
+            overflow-y:scroll;
+        }
+    
+        .moving-text{
+            position:relative;
+            animation: moving-text 5s infinite;
+            animation-timing-function: linear;
+            color: rgb(123, 103, 95);
+        }
+
+        .moving-text-left{
+            position:relative;
+            animation: moving-text-left 5s infinite;
+            animation-timing-function: linear;
+            animation-direction: left;
+            color: rgb(123, 103, 95);
+        }
+
+        /* #moving-text1{
+            animation-timing-function: linear;
+        } */
+
+        .top-text {
+	position: absolute;
+	top: 500px; /* some number relative to the top of the page */
+	left: 100px; /* some number relative to the left of the page */
+	z-index: 9; /* this is to make sure it's on top*/
+    font-size: 30px;
+}
+.top-text2 {
+	position: absolute;
+	top: 200px; /* some number relative to the top of the page */
+	left: -850px; /* some number relative to the left of the page */
+	z-index: 9; /* this is to make sure it's on top*/
+    font-size: 30px;
+}
+.top-text3 {
+	position: absolute;
+	top: 595px; /* some number relative to the top of the page */
+	left: -200px; /* some number relative to the left of the page */
+	z-index: 9; /* this is to make sure it's on top*/
+    font-size: 30px;
+}
+.top-text4 {
+	position: absolute;
+	top: 750px; /* some number relative to the top of the page */
+	left: -200px; /* some number relative to the left of the page */
+	z-index: 9; /* this is to make sure it's on top*/
+    font-size: 40px;
+	font-family:'FZXiaoZhuanTi-S13T' ;
+}
+.title-text {
+	position: absolute;
+	top: 50px; /* some number relative to the top of the page */
+	left: 490px; /* some number relative to the left of the page */
+	z-index: 9; /* this is to make sure it's on top*/
+    font-size: 50px;
+	font-family:'Pfeffer Mediæval' ;
+    color: rgb(105, 83, 74);
+
+}
+.grid-item {
+  padding: 20px;
+  font-size: 250px;
+  text-align: center;
+  font-family:'FZXiaoZhuanTi-S13T' ;
+  color: rgb(105, 83, 74);
+}
+.archive-container{
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 30px;
+			margin-left: 1px;
+			justify-content: center;
+            column-gap: 30px;
+            transition: transform 1s, color .5s, font-size .5s, border .5s;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+            height: 340px;
+            width:450px;
+            margin-top: 50px;
+		}
+        .archive-container:hover {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 30px;
+			margin-left: 1px;
+			justify-content: center;
+            column-gap: 50px;
+            transition: transform 1s, color .5s, font-size .5s, border .5s;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+            height: 340px;
+            width:450px;
+            font-size: 250px;
+            font-family: 'CMEXKai';
+            
+		}
+        /* image containers */
+
+  .Standard{
+    display:inline-block;
+    }
+    .column1:hover .Standard{
+    display:none;
+    }
+    
+    .ShowOnHover{
+    display:none;
+    }
+    .column1:hover .ShowOnHover{
+    display:inline-block;
+    }
+
+/* .grid-item :hover{
+    font-size:88px;
+    transition: all 500ms;
+    font-size-adjust: 20px;
+
+} */
+
+@keyframes moving-text {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(2500px);
+  }
+}
+
+@keyframes moving-text-left {
+  from {
+    transform: translateX(2500px);
+  }
+  to {
+    transform: translateX(-500px);
+  }
+}
+
+    .grain {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 999999999999;
+        pointer-events: none;
+        opacity: .17;
+        object-fit: cover;
+    }
+    </style>
+</head>
+<body>
+    <img src="paper.png" class="grain">
+
+    <div class="column-container">
+        <div class="column-wrapper">
+            <div class="column grid-item">
+                <div class="archive-container" style="margin-top:80px;">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout 3rd-22.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout 3rd-44.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout 3rd-23.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout 3rd-45.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout 3rd-24.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout 3rd-46.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout 3rd-25.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout 3rd-47.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout 3rd-26.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout 3rd-48.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout 3rd-27.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout 3rd-49.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout 3rd-28.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout 3rd-50.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout 3rd-29.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout 3rd-51.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout 3rd-30.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout 3rd-52.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout 3rd-31.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout 3rd-53.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout 3rd-32.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout 3rd-54.png" />
+                        </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column-wrapper">
+            <div class="column grid-item">
+                <div class="archive-container"style="margin-top:80px;">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="website layout 2nd-55.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="website layout 2nd-12.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="website layout 2nd-56.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="website layout 2nd-13.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="website layout 2nd-57.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="website layout 2nd-14.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="website layout 2nd-58.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="website layout 2nd-15.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="website layout 2nd-59.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="website layout 2nd-16.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="website layout 2nd-60.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="website layout 2nd-17.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="website layout 2nd-61.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="website layout 2nd-18.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="website layout 2nd-62.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="website layout 2nd-19.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="website layout 2nd-63.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="website layout 2nd-20.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="website layout 2nd-64.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="website layout 2nd-21.png" />
+                        </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column-wrapper">
+            <div class="column grid-item">
+                <div class="archive-container"style="margin-top:80px;">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout-01.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout-33.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout-02.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout-34.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout-03.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout-35.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout-04.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout-36.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout-05.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout-37.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout-06.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout-38.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout-07.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout-39.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout-08.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout-40.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout-09.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout-41.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout-10.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout-42.png" />
+                        </a></div>
+                    </div>
+                </div>
+                <div class="archive-container" style="margin-bottom:0px;">
+                    <div>
+                        <div class="column1">
+                        <img class="Standard" style="width: 100%;" src="layout-11.png" />
+                        <img class="ShowOnHover" style="width: 100%;" src="layout-43.png" />
+                        </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="column-wrapper">
+            <div class="column grid-item">
+                <p>有朋自远方来不亦乐乎</p>
+            </div>
+        </div> -->
+        <!-- <div class="column-wrapper">
+            <div class="column grid-item">
+                <p>子曰学而时习之不亦说乎</p>
+            </div>
+        </div>
+    </div> -->
+    
+    <!-- <div class="top-text moving-text" style="font-size: 25px;font-family:Pfeffer Mediæval ">
+        Is it not a joy to have friends visit from afar?
+           </div>
+       <div class="move">
+    
+       </div>
+       <div class="top-text2 moving-text-left" style="font-family:Pfeffer Mediæval">
+        Confucius said: Is it not a pleasure to study and constantly apply the lessons that you have learned?
+         </div>
+    
+    </div>
+    <div class="top-text3 moving-text" style="font-size: 35px;font-family:Pfeffer Mediæval">
+        Is it not the mark of a leader to remain unconcerned when others do not recognize your talents?
+    </div> -->
+    
+    <!-- <div class="top-text4 moving-text-left">
+        学而时习之不亦说乎
+       </div> -->
+
+    <div class="title-text" style="text-shadow: antiquewhite 1px 0 10px;">
+        The Analects of Confucius
+    </div>
+</body>
+</html>
